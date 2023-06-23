@@ -6,7 +6,7 @@
 /*   By: sejokim <sejokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 19:25:04 by sejokim           #+#    #+#             */
-/*   Updated: 2023/06/23 14:50:47 by sejokim          ###   ########.fr       */
+/*   Updated: 2023/06/23 16:05:37 by sejokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,14 @@
 # define BUFFER_SIZE 42
 # define STDERR_FILENO 2
 
-# include <string.h>
-# include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
+# include <termios.h>
+# include <readline/readline.h>
+# include <readline/history.h>
 # include <stdlib.h>
+# include <string.h>
 # include <limits.h>
-# include <unistd.h>
 
 typedef enum e_token
 {

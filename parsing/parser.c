@@ -6,7 +6,7 @@
 /*   By: sejokim <sejokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 12:16:13 by sejokim           #+#    #+#             */
-/*   Updated: 2023/06/23 14:43:08 by sejokim          ###   ########.fr       */
+/*   Updated: 2023/06/23 15:33:19 by sejokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@ int	parser(t_tokens	*cmds, char *line)
 {
 	if (check_quote(line))
 		return (1);
+	if (tokenizer(&cmds, line) != 0 || !token || lexer(token) != 0)
+	{
+		
+	}
 }
 
 /* 

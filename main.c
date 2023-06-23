@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sejokim <sejokim@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/23 15:34:46 by sejokim           #+#    #+#             */
+/*   Updated: 2023/06/23 15:35:21 by sejokim          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 void	shell_setting(int ac, char **av)
@@ -17,7 +29,7 @@ void	shell_setting(int ac, char **av)
 int	main(int ac, char **av, char **ev)
 {
 	char	*str;
-	t_token	*commands;
+	t_token	*cmds;
 
 	shell_setting(ac, av);
 	while (1)
@@ -27,7 +39,7 @@ int	main(int ac, char **av, char **ev)
 			break;
 		if (*str != '\0')
 			add_history(str);
-		if (!parsing(commands, str)) //파싱과 커맨드 에러 체크까지 해준다
+		if (!parsing(cmds, str)) //파싱과 커맨드 에러 체크까지 해준다
 		{
 			free(str);
 			continue ;
